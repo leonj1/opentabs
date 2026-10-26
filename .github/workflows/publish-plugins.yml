@@ -17,7 +17,7 @@ jobs:
   publish:
     # Skip commits made by this workflow (version bumps) to prevent loops
     if: "!startsWith(github.event.head_commit.message, 'chore: auto-publish plugin')"
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     permissions:
       contents: write
     steps:
